@@ -19,7 +19,7 @@ Open page
     maximize browser window
     Go To    ${LOGIN URL}
     Wait Until Page Contains Element      id:onetrust-accept-btn-handler
-    Click Element      id:onetrust-accept-btn-handler           #accepts cookies changed
+    Click Element      id:onetrust-accept-btn-handler           #accepts cookies changed 2
 
 Open Search
     wait until page contains element      id:submit-searchmain
