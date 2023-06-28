@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.10.4 on win32)" generated="20230207 23:03:02.937" rpa="false" schemaversion="3">
+<suite id="s1" name="EmailLogin" source="C:\Users\Marci\PycharmProjects\pythonProject\Automation\EmailLogin.robot">
+<test id="s1-t1" name="Open Page Test" line="9">
+<kw name="Open page">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230207 23:03:03.149" level="INFO">Opening browser 'firefox' to base url 'None'.</msg>
+<msg timestamp="20230207 23:03:03.156" level="INFO">Firefox driver log is always forced to to: C:\Users\Marci\PycharmProjects\pythonProject\Automation\Results\geckodriver-18.log</msg>
+<status status="PASS" starttime="20230207 23:03:03.149" endtime="20230207 23:03:10.286"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230207 23:03:10.286" endtime="20230207 23:03:10.540"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230207 23:03:10.540" level="INFO">Opening url 'https://www.olx.pl/'</msg>
+<status status="PASS" starttime="20230207 23:03:10.540" endtime="20230207 23:03:11.981"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>id:onetrust-accept-btn-handler</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230207 23:03:11.981" endtime="20230207 23:03:12.261"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:onetrust-accept-btn-handler</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230207 23:03:12.262" level="INFO">Clicking element 'id:onetrust-accept-btn-handler'.</msg>
+<status status="PASS" starttime="20230207 23:03:12.261" endtime="20230207 23:03:12.563"/>
+</kw>
+<status status="PASS" starttime="20230207 23:03:03.148" endtime="20230207 23:03:12.563"/>
+</kw>
+<status status="PASS" starttime="20230207 23:03:03.148" endtime="20230207 23:03:12.563"/>
+</test>
+<test id="s1-t2" name="Open Search Box TEst" line="12">
+<kw name="Open Search">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>id:submit-searchmain</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230207 23:03:12.564" endtime="20230207 23:03:12.570"/>
+</kw>
+<kw name="Double Click Element" library="SeleniumLibrary">
+<arg>id:submit-searchmain</arg>
+<doc>Double clicks the element identified by ``locator``.</doc>
+<msg timestamp="20230207 23:03:12.570" level="INFO">Double clicking element 'id:submit-searchmain'.</msg>
+<status status="PASS" starttime="20230207 23:03:12.570" endtime="20230207 23:03:12.934"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>class:css-1m2f27v</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230207 23:03:12.934" endtime="20230207 23:03:14.873"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:range-from-input</arg>
+<arg>300000</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230207 23:03:14.874" level="INFO">Typing text '300000' into text field 'name:range-from-input'.</msg>
+<status status="PASS" starttime="20230207 23:03:14.873" endtime="20230207 23:03:14.938"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:range-to-input</arg>
+<arg>600000</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230207 23:03:14.939" level="INFO">Typing text '600000' into text field 'name:range-to-input'.</msg>
+<status status="PASS" starttime="20230207 23:03:14.938" endtime="20230207 23:03:14.959"/>
+</kw>
+<status status="PASS" starttime="20230207 23:03:12.564" endtime="20230207 23:03:14.959"/>
+</kw>
+<status status="PASS" starttime="20230207 23:03:12.564" endtime="20230207 23:03:14.960"/>
+</test>
+<status status="PASS" starttime="20230207 23:03:02.939" endtime="20230207 23:03:14.961"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="EmailLogin">EmailLogin</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
