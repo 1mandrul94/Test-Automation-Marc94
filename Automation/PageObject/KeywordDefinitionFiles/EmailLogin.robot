@@ -3,7 +3,7 @@ Library    SeleniumLibrary
 
 *** Variables ***
 ${LOGIN URL}    https://www.olx.pl/
-${BROWSER}    Firefox
+${BROWSER}    Chrome
 
 *** Test Cases ***
 Open Page Test
@@ -11,7 +11,6 @@ Open Page Test
 
 Open Search Box TEst
     Open Search
-    TEst
 
 *** Keywords ***
 Open page
