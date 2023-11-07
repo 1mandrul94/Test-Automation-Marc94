@@ -11,7 +11,7 @@ Open Page Test
 
 Open Search Box TEst
     Open Search
-
+    TEst
 
 *** Keywords ***
 Open page
