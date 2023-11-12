@@ -1,91 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.10.4 on win32)" generated="20231107 20:51:47.559" rpa="false" schemaversion="3">
-<suite id="s1" name="EmailLogin" source="C:\Users\Marci\PycharmProjects\pythonProject\Automation\EmailLogin.robot">
-<test id="s1-t1" name="Open Page Test" line="9">
-<kw name="Open page">
+<robot generator="Robot 6.0.2 (Python 3.10.4 on win32)" generated="20231111 22:22:43.854" rpa="false" schemaversion="3">
+<suite id="s1" name="Automation" source="C:\Users\Marci\PycharmProjects\pythonProject\Automation">
+<suite id="s1-s1" name="Tests" source="C:\Users\Marci\PycharmProjects\pythonProject\Automation\Tests">
+<suite id="s1-s1-s1" name="PageObject" source="C:\Users\Marci\PycharmProjects\pythonProject\Automation\Tests\PageObject.robot">
+<test id="s1-s1-s1-t1" name="Opening The Internet" line="11">
+<kw name="Opening Browser" library="Common">
+<arg>${site_url}</arg>
+<arg>${browser}</arg>
 <kw name="Open Browser" library="SeleniumLibrary">
+<arg>${site_url}</arg>
+<arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20231107 20:51:48.074" level="INFO">Opening browser 'firefox' to base url 'None'.</msg>
-<msg timestamp="20231107 20:51:48.083" level="INFO">Firefox driver log is always forced to to: C:\Users\Marci\PycharmProjects\pythonProject\Automation\Results\geckodriver-2.log</msg>
-<msg timestamp="20231107 20:51:52.953" level="INFO">Cannot capture screenshot because no browser is open.</msg>
-<msg timestamp="20231107 20:51:52.953" level="FAIL">WebDriverException: Message: Process unexpectedly closed with status 0
-</msg>
-<status status="FAIL" starttime="20231107 20:51:48.074" endtime="20231107 20:51:53.065"/>
+<msg timestamp="20231111 22:22:44.060" level="INFO">Opening browser 'Firefox' to base url 'https://the-internet.herokuapp.com/'.</msg>
+<msg timestamp="20231111 22:22:44.060" level="INFO">Firefox driver log is always forced to to: C:\Users\Marci\PycharmProjects\pythonProject\Automation\Results\geckodriver-8.log</msg>
+<status status="PASS" starttime="20231111 22:22:44.059" endtime="20231111 22:22:51.391"/>
 </kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="NOT RUN" starttime="20231107 20:51:53.065" endtime="20231107 20:51:53.065"/>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${HomePageHeading}</arg>
+<arg>timeout=5</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20231111 22:22:51.392" level="FAIL">Variable '${HomePageHeading}' not found.</msg>
+<status status="FAIL" starttime="20231111 22:22:51.391" endtime="20231111 22:22:51.392"/>
 </kw>
-<kw name="Go To" library="SeleniumLibrary">
-<arg>${LOGIN URL}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="NOT RUN" starttime="20231107 20:51:53.065" endtime="20231107 20:51:53.065"/>
+<status status="FAIL" starttime="20231111 22:22:44.059" endtime="20231111 22:22:51.392"/>
 </kw>
-<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<arg>id:onetrust-accept-btn-handler</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="NOT RUN" starttime="20231107 20:51:53.065" endtime="20231107 20:51:53.065"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>id:onetrust-accept-btn-handler</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20231107 20:51:53.065" endtime="20231107 20:51:53.065"/>
-</kw>
-<status status="FAIL" starttime="20231107 20:51:48.073" endtime="20231107 20:51:53.066"/>
-</kw>
-<status status="FAIL" starttime="20231107 20:51:48.073" endtime="20231107 20:51:53.066">WebDriverException: Message: Process unexpectedly closed with status 0
-</status>
+<tag>Marcin</tag>
+<status status="FAIL" starttime="20231111 22:22:44.059" endtime="20231111 22:22:51.392">Variable '${HomePageHeading}' not found.</status>
 </test>
-<test id="s1-t2" name="Open Search Box TEst" line="12">
-<kw name="Open Search">
-<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<arg>id:submit-searchmain</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<msg timestamp="20231107 20:51:53.071" level="INFO">Cannot capture screenshot because no browser is open.</msg>
-<msg timestamp="20231107 20:51:53.071" level="FAIL">No browser is open.</msg>
-<status status="FAIL" starttime="20231107 20:51:53.070" endtime="20231107 20:51:53.122"/>
-</kw>
-<kw name="Double Click Element" library="SeleniumLibrary">
-<arg>id:submit-searchmain</arg>
-<doc>Double clicks the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20231107 20:51:53.122" endtime="20231107 20:51:53.122"/>
-</kw>
-<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<arg>class:css-1m2f27v</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="NOT RUN" starttime="20231107 20:51:53.122" endtime="20231107 20:51:53.122"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>name:range-from-input</arg>
-<arg>300000</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20231107 20:51:53.122" endtime="20231107 20:51:53.122"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>name:range-to-input</arg>
-<arg>600000</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20231107 20:51:53.122" endtime="20231107 20:51:53.123"/>
-</kw>
-<status status="FAIL" starttime="20231107 20:51:53.070" endtime="20231107 20:51:53.123"/>
-</kw>
-<kw name="TEst">
-<status status="NOT RUN" starttime="20231107 20:51:53.128" endtime="20231107 20:51:53.128"/>
-</kw>
-<status status="FAIL" starttime="20231107 20:51:53.068" endtime="20231107 20:51:53.130">No browser is open.</status>
-</test>
-<status status="FAIL" starttime="20231107 20:51:47.584" endtime="20231107 20:51:53.136"/>
+<status status="FAIL" starttime="20231111 22:22:43.875" endtime="20231111 22:22:51.393"/>
+</suite>
+<status status="FAIL" starttime="20231111 22:22:43.873" endtime="20231111 22:22:51.395"/>
+</suite>
+<status status="FAIL" starttime="20231111 22:22:43.856" endtime="20231111 22:22:51.395"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="2" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
+<stat pass="0" fail="1" skip="0">Marcin</stat>
 </tag>
 <suite>
-<stat pass="0" fail="2" skip="0" id="s1" name="EmailLogin">EmailLogin</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="Automation">Automation</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Tests">Automation.Tests</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="PageObject">Automation.Tests.PageObject</stat>
 </suite>
 </statistics>
 <errors>
+<msg timestamp="20231111 22:22:44.055" level="ERROR">Error in file 'C:\Users\Marci\PycharmProjects\pythonProject\Automation\PageObject\KeywordDefinitionFiles\Common.robot' on line 3: Processing variable file 'C:\Users\Marci\PycharmProjects\pythonProject\Automation\PageObject\Locators\locators.py' failed: Importing variable file 'C:\Users\Marci\PycharmProjects\pythonProject\Automation\PageObject\Locators\locators.py' failed: SyntaxError: invalid syntax (locators.py, line 2)
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\Marci\PycharmProjects\pythonProject\Automation\PageObject\Locators
+  C:\Users\Marci\PycharmProjects\pythonProject\venv\Scripts\robot.exe
+  C:\Users\Marci\AppData\Local\Programs\Python\Python310\python310.zip
+  C:\Users\Marci\AppData\Local\Programs\Python\Python310\DLLs
+  C:\Users\Marci\AppData\Local\Programs\Python\Python310\lib
+  C:\Users\Marci\AppData\Local\Programs\Python\Python310
+  C:\Users\Marci\PycharmProjects\pythonProject\venv
+  C:\Users\Marci\PycharmProjects\pythonProject\venv\lib\site-packages</msg>
+<msg timestamp="20231111 22:22:44.058" level="ERROR">Error in file 'C:\Users\Marci\PycharmProjects\pythonProject\Automation\Tests\PageObject.robot' on line 4: Error in file 'C:\Users\Marci\PycharmProjects\pythonProject\Automation\PageObject\KeywordDefinitionFiles\HomePage.robot' on line 7: Resource file with 'Test Cases' section is invalid.</msg>
 </errors>
 </robot>
