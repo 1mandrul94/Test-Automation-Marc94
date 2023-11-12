@@ -1,5 +1,5 @@
 #Home Page Locators
-HomePageHeading = "//*[@id="content"]/h1"
+HomePageHeading = '//*[@id="content"]/h1'
 
 
 
