@@ -10,3 +10,6 @@ Opening Browser
     Open Browser    ${site_url}    ${browser}
     Wait until element is visible    ${HomePageHeading}    timeout=5
 
+Opening Add/Remove Element
+    Click element    ${AddRemoveElement}
+    Wait until element is visible    ${AddRemoveHeading}

@@ -1,9 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
-Variables    ../Locators/Locators.py
+Variables    ../Locators/locators.py
 Variables    ../TestData/TestData.py
-
-
-*** Test Cases ***
 
 *** Keywords ***
