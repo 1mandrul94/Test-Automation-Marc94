@@ -11,3 +11,9 @@ ${browser}    Firefox
 Opening The Internet
     [Tags]    Marcin
     Opening Browser    ${site_url}    ${browser}
+    [Teardown]
+
+Add/Remove Test
+    [Tags]    Add/Remove
+    Opening Browser   ${site_url}    ${browser}
+    Opening Add/Remove Element
