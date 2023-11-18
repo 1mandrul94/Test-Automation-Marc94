@@ -5,11 +5,10 @@ Variables    ../TestData/TestData.py
 
 *** Keywords ***
 
-Opening Browser
-    [Arguments]    ${site_url}    ${browser}
-    Open Browser    ${site_url}    ${browser}
-    Wait until element is visible    ${HomePageHeading}    timeout=5
+Opening Sub Page
+    [Arguments]    ${sub_page_url}    ${sub_page_element}
+    Click element    ${sub_page_url}
+    Wait until element is visible    ${sub_page_element}
 
-Opening Add/Remove Element
-    Click element    ${AddRemoveElement}
-    Wait until element is visible    ${AddRemoveHeading}
+
+

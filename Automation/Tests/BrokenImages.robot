@@ -8,12 +8,10 @@ ${site_url}    https://the-internet.herokuapp.com/
 ${browser}    Firefox
 
 *** Test Cases ***
-Opening The Internet
-    [Tags]    Marcin
-    Opening Browser    ${site_url}    ${browser}
-    [Teardown]
 
-Add/Remove Test
-    [Tags]    Add/Remove
-    Opening Browser   ${site_url}    ${browser}
-    Opening Add/Remove Element
+Finding Avatar Image
+    [Tags]    Regression    BrokenImages
+    Opening Browser    ${site_url}    ${browser}
+    Opening Sub Page    ${BrokenImages}    ${BrokenImagesHeading}
+    Page Should Contain Image    ${AvatarImage}
+    Capture Element Screenshot    ${AvatarImage}
