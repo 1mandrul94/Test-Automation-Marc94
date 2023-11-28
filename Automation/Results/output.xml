@@ -1,64 +1,118 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.10.4 on win32)" generated="20231111 22:22:43.854" rpa="false" schemaversion="3">
+<robot generator="Robot 6.0.2 (Python 3.10.4 on win32)" generated="20231128 21:56:36.818" rpa="false" schemaversion="3">
 <suite id="s1" name="Automation" source="C:\Users\Marci\PycharmProjects\pythonProject\Automation">
 <suite id="s1-s1" name="Tests" source="C:\Users\Marci\PycharmProjects\pythonProject\Automation\Tests">
-<suite id="s1-s1-s1" name="PageObject" source="C:\Users\Marci\PycharmProjects\pythonProject\Automation\Tests\PageObject.robot">
-<test id="s1-s1-s1-t1" name="Opening The Internet" line="11">
-<kw name="Opening Browser" library="Common">
+<suite id="s1-s1-s1" name="ChallengingDOM" source="C:\Users\Marci\PycharmProjects\pythonProject\Automation\Tests\ChallengingDOM.robot">
+<test id="s1-s1-s1-t1" name="Blue Button Click" line="17">
+<kw name="Test Prerequisite">
+<kw name="Opening Browser" library="HomePage">
 <arg>${site_url}</arg>
 <arg>${browser}</arg>
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${site_url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20231111 22:22:44.060" level="INFO">Opening browser 'Firefox' to base url 'https://the-internet.herokuapp.com/'.</msg>
-<msg timestamp="20231111 22:22:44.060" level="INFO">Firefox driver log is always forced to to: C:\Users\Marci\PycharmProjects\pythonProject\Automation\Results\geckodriver-8.log</msg>
-<status status="PASS" starttime="20231111 22:22:44.059" endtime="20231111 22:22:51.391"/>
+<msg timestamp="20231128 21:56:37.102" level="INFO">Opening browser 'Firefox' to base url 'https://the-internet.herokuapp.com/'.</msg>
+<msg timestamp="20231128 21:56:37.102" level="INFO">Firefox driver log is always forced to to: C:\Users\Marci\PycharmProjects\pythonProject\Automation\Results\geckodriver-10.log</msg>
+<status status="PASS" starttime="20231128 21:56:37.102" endtime="20231128 21:56:44.910"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${HomePageHeading}</arg>
 <arg>timeout=5</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<msg timestamp="20231111 22:22:51.392" level="FAIL">Variable '${HomePageHeading}' not found.</msg>
-<status status="FAIL" starttime="20231111 22:22:51.391" endtime="20231111 22:22:51.392"/>
+<status status="PASS" starttime="20231128 21:56:44.910" endtime="20231128 21:56:44.934"/>
 </kw>
-<status status="FAIL" starttime="20231111 22:22:44.059" endtime="20231111 22:22:51.392"/>
+<status status="PASS" starttime="20231128 21:56:37.102" endtime="20231128 21:56:44.934"/>
 </kw>
-<tag>Marcin</tag>
-<status status="FAIL" starttime="20231111 22:22:44.059" endtime="20231111 22:22:51.392">Variable '${HomePageHeading}' not found.</status>
+<kw name="Opening Sub Page" library="Common">
+<arg>${ChallengingDom}</arg>
+<arg>${ChallengingDomHeading}</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${sub_page_url}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231128 21:56:44.937" level="INFO">Clicking element '//*[@id="content"]/ul/li[5]/a'.</msg>
+<status status="PASS" starttime="20231128 21:56:44.934" endtime="20231128 21:56:45.164"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${sub_page_element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231128 21:56:45.165" endtime="20231128 21:56:45.183"/>
+</kw>
+<status status="PASS" starttime="20231128 21:56:44.934" endtime="20231128 21:56:45.183"/>
+</kw>
+<status status="PASS" starttime="20231128 21:56:37.102" endtime="20231128 21:56:45.183"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${BlueButton}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20231128 21:56:45.183" endtime="20231128 21:56:45.183"/>
+</kw>
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<var>${id}</var>
+<arg>${BlueButton}</arg>
+<arg>id</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<msg timestamp="20231128 21:56:45.218" level="INFO">${id} = 902491c0-705e-013c-c307-1a867a4b6aab</msg>
+<status status="PASS" starttime="20231128 21:56:45.183" endtime="20231128 21:56:45.218"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>//*[@id="${id}"]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20231128 21:56:45.224" level="INFO">Current page contains element '//*[@id="902491c0-705e-013c-c307-1a867a4b6aab"]'.</msg>
+<status status="PASS" starttime="20231128 21:56:45.219" endtime="20231128 21:56:45.224"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231128 21:56:47.240" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231128 21:56:45.224" endtime="20231128 21:56:47.240"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.getElementById("${id}").click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20231128 21:56:47.242" level="INFO">Executing JavaScript:
+document.getElementById("902491c0-705e-013c-c307-1a867a4b6aab").click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20231128 21:56:47.241" endtime="20231128 21:56:47.250"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231128 21:56:49.257" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231128 21:56:47.250" endtime="20231128 21:56:49.257"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${BlueButton}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20231128 21:56:49.273" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-2.png"&gt;&lt;img src="selenium-element-screenshot-2.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231128 21:56:49.259" endtime="20231128 21:56:49.274"/>
+</kw>
+<tag>BlueButton</tag>
+<tag>ChallengingDom</tag>
+<tag>Regression</tag>
+<status status="PASS" starttime="20231128 21:56:37.101" endtime="20231128 21:56:49.275"/>
 </test>
-<status status="FAIL" starttime="20231111 22:22:43.875" endtime="20231111 22:22:51.393"/>
+<status status="PASS" starttime="20231128 21:56:36.847" endtime="20231128 21:56:49.275"/>
 </suite>
-<status status="FAIL" starttime="20231111 22:22:43.873" endtime="20231111 22:22:51.395"/>
+<status status="PASS" starttime="20231128 21:56:36.847" endtime="20231128 21:56:49.278"/>
 </suite>
-<status status="FAIL" starttime="20231111 22:22:43.856" endtime="20231111 22:22:51.395"/>
+<status status="PASS" starttime="20231128 21:56:36.825" endtime="20231128 21:56:49.279"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="0" fail="1" skip="0">Marcin</stat>
+<stat pass="1" fail="0" skip="0">BlueButton</stat>
+<stat pass="1" fail="0" skip="0">ChallengingDom</stat>
+<stat pass="1" fail="0" skip="0">Regression</stat>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Automation">Automation</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s1" name="Tests">Automation.Tests</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="PageObject">Automation.Tests.PageObject</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Automation">Automation</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Tests">Automation.Tests</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="ChallengingDOM">Automation.Tests.ChallengingDOM</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20231111 22:22:44.055" level="ERROR">Error in file 'C:\Users\Marci\PycharmProjects\pythonProject\Automation\PageObject\KeywordDefinitionFiles\Common.robot' on line 3: Processing variable file 'C:\Users\Marci\PycharmProjects\pythonProject\Automation\PageObject\Locators\locators.py' failed: Importing variable file 'C:\Users\Marci\PycharmProjects\pythonProject\Automation\PageObject\Locators\locators.py' failed: SyntaxError: invalid syntax (locators.py, line 2)
-Traceback (most recent call last):
-  None
-PYTHONPATH:
-  C:\Users\Marci\PycharmProjects\pythonProject\Automation\PageObject\Locators
-  C:\Users\Marci\PycharmProjects\pythonProject\venv\Scripts\robot.exe
-  C:\Users\Marci\AppData\Local\Programs\Python\Python310\python310.zip
-  C:\Users\Marci\AppData\Local\Programs\Python\Python310\DLLs
-  C:\Users\Marci\AppData\Local\Programs\Python\Python310\lib
-  C:\Users\Marci\AppData\Local\Programs\Python\Python310
-  C:\Users\Marci\PycharmProjects\pythonProject\venv
-  C:\Users\Marci\PycharmProjects\pythonProject\venv\lib\site-packages</msg>
-<msg timestamp="20231111 22:22:44.058" level="ERROR">Error in file 'C:\Users\Marci\PycharmProjects\pythonProject\Automation\Tests\PageObject.robot' on line 4: Error in file 'C:\Users\Marci\PycharmProjects\pythonProject\Automation\PageObject\KeywordDefinitionFiles\HomePage.robot' on line 7: Resource file with 'Test Cases' section is invalid.</msg>
 </errors>
 </robot>
