@@ -25,6 +25,7 @@ Blue Button Click
     Execute Javascript    document.getElementById("${id}").click()
     Sleep    2s
     Capture Element Screenshot    ${BlueButton}
+    Close Browser
 
 Red Button Click
     [Tags]    Regression    ChallengingDom    RedButton
