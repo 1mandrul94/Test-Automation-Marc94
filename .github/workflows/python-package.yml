@@ -22,4 +22,4 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirement.txt
     - name: Run Test
-      run: run: python -m robot
+      run: python -m robot
