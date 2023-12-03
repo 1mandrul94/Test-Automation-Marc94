@@ -18,3 +18,4 @@ Drag And Drop
     Drag And Drop    ${ColumnA}    ${ColumnB}    html5=True
     Capture Element Screenshot    ${ColumnB}
     Execute Javascript    document.getElementById('column-b').click()
+    Close Browser
