@@ -23,7 +23,7 @@ Create User
     ${data}  Create Dictionary  name=JohnDoe  username=johndoe
     ${response}  Post Request  users  /users  data=${data}
     Should Be Equal As Numbers  ${response.status_code}  201
-    ${user}  Convert To Json  ${response.content}
+    #${user}  Convert To Json  ${response.content}
     Log Many  ${user}
 
 *** Keywords ***
